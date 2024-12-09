@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { motion } from 'framer-motion';
+import Logo from '../Logo/Logo';
 
 const Navbar: React.FC = () => {
   const [navOpen, setNavOpen] = useState(false);
@@ -39,16 +40,7 @@ const Navbar: React.FC = () => {
       <div className="container mx-auto flex justify-between items-center p-4">
         {/* Logo */}
         <div className="flex items-center">
-          <a href="/" className="flex items-center">
-            <motion.img
-              src="/assets/logo.png" // Replace with your logo path
-              alt="Dex House for Trader"
-              className="w-10 h-10 mr-2"
-              whileHover={{ rotate: 360 }}
-              transition={{ duration: 1 }}
-            />
-            <span className="text-2xl font-bold text-white">DexHouse</span>
-          </a>
+            <Logo size="md" animated={false} />
         </div>
 
         {/* Desktop Menu */}
